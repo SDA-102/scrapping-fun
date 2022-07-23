@@ -2,11 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Serving Web Content</title>
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+    <link href="../static/css/bulma.min.css" th:href="@{/css/bulma.min.css}" rel="stylesheet" />
+    <link href="../static/css/bulma-rtl.min.css" th:href="@{/css/bulma-rtl.min.css}" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
 <h1>Scrapping is Fun!</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Job Title</th>
+        <th>Min Pay range</abbr></th>
+        <th>Max Pay Range</abbr></th>
+        <th>Location</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr th:each="job: ${jobs}">
+        <td th:text="${job.title}">Job</td>
+        <td th:text="${job.minPayRange}">Job</td>
+        <td th:text="${job.maxPayRange}">Job</td>
+        <td th:text="${job.location}">Job</td>
+    </tr>
+    </tfoot>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
