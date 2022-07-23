@@ -10,6 +10,7 @@ Scraping Junior Jobs from most popular services
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Thymeleaf](https://www.thymeleaf.org/)
+- [Bulma CSS](https://bulma.io/)
 
 ## Authors
 
