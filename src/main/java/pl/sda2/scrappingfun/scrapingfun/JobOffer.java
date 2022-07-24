@@ -7,10 +7,19 @@ import lombok.Data;
 @AllArgsConstructor
 public class JobOffer {
 
+    private Long id;
     private String title;
     private double minPayRange;
     private double maxPayRange;
     private String location;
 
+    public static JobOffer from(JobOfferEntity entity) {
+        return new JobOffer(entity.getId(),
+                            entity.getTitle(),
+                            entity.getMinPayRange(),
+                            entity.getMaxPayRange(),
+                            entity.getLocation()
+        );
+    }
 
 }
